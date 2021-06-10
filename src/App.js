@@ -5,8 +5,10 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <input type = "text" placeholder="Enter Text"/>
-      <button type = "submit">Add To-Do</button>
+        <form id = "button">
+          <input type = "text" placeholder="Enter Text"/>
+          <button type = "submit">Add To-Do</button>
+        </form>
     </div>
 
   );
