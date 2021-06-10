@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <Header/>
         <form id = "button">
-          <input type = "text" placeholder="Enter Text"/>
+          <input type = "text" placeholder="Enter To-Do"/>
           <button type = "submit">Add To-Do</button>
         </form>
     </div>
