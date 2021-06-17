@@ -1,7 +1,7 @@
 import Header from "./component/header";
 import React from "react";
 import './App.css';
-import listItems from "./listItems";
+import ArrayItems from "./ArrayItems";
 
 class App extends React.Component{
 
@@ -9,7 +9,7 @@ class App extends React.Component{
   super(props);
   this.state={
     items:[],
-    currentItem:{
+    currentItem:{ 
       text:'',
       key:''
     }
@@ -30,7 +30,7 @@ addItem(e){
   const newItem = this.state.currentItem;
   console.log(newItem);
     if(newItem.text!==""){
-    const newItems = [...this.state.items, newItem];
+    const newItems = [this.state.items, newItem];
     this.setState({
       items:newItems,
       currentItem:{
@@ -48,13 +48,12 @@ render(){
           <input type = "text" placeholder="Enter To-Do"
           value = {this.state.currentItem.text}
           onChange = {this.handleInput}/>
-          <button type = "submit">Add Item
-          </button>
+          <button type = "submit"> Add Item </button>
         </form>
-      <listItems></listItems>  
-    </div>
+       <ArrayItems items = {this.state.items} />
+    </div> 
   );
 }
 }
-
+   
 export default App;
