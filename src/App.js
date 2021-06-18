@@ -1,7 +1,7 @@
 import Header from "./component/header";
 import React from "react";
 import './App.css';
-import ListItems from './ListItems';
+import ListItems from './ListItems.js';
 
 class App extends React.Component{
 
