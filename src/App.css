@@ -1,6 +1,6 @@
 .App {
   background-color: #FEFFFF;
-  width: 800px;
+  width: 400px;
   min-height: 500px;
   margin: 40px auto;
 }
@@ -20,7 +20,7 @@ code {
     monospace;
 }
 
-#button input{
+#to-do-form input{
   background-color: #17252A;
   width: 200px;
   height: 40px;
@@ -32,18 +32,18 @@ code {
   border: 0;
 }
 
-#button input::placeholder{
+#to-do-form input::placeholder{
   color: #FEFFFF;
 
 }
 
-#button input:focus{
+#to-do-form input:focus{
   outline: none;
 }
 
-#button button{
+#to-do-form button{
   height:40px;
-  width:100px;
+  width:80px;
   border-radius: 7px;
   border: 0;
   background-color: #DEF2F1;
