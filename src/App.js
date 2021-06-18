@@ -1,7 +1,7 @@
 import Header from "./component/header";
 import React from "react";
 import './App.css';
-import listItems from "./listItems";
+import ListItems from './ListItems';
 
 class App extends React.Component{
 
@@ -22,7 +22,6 @@ handleInput(e){
 addItem(e){
   e.preventDefault(); 
   const newItem = this.state.currentItem;
-  console.log(newItem);
   if(newItem.text!==""){
       const newItems = [...this.state.items, newItem];
       this.setState({items:newItems, currentItem:{text:'', key:''}})
@@ -39,7 +38,7 @@ render(){
           <button type = "submit">Add Item
           </button>
         </form>
-      <listItems items = {this.state.items}></listItems>  
+      <ListItems items = {this.state.items}></ListItems>  
     </div>
   );
 }
