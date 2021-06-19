@@ -9,7 +9,7 @@ class App extends React.Component{
   super(props);
   this.state={
     items:[],
-    currentItem:{ text:'', key:'' }
+    currentItem:{text:'', key:''}
   }
   this.handleInput = this.handleInput.bind(this);
   this.addItem = this.addItem.bind(this);
@@ -27,6 +27,7 @@ addItem(e){
       this.setState({items:newItems, currentItem:{text:'', key:''}})
   }
 }
+
 render(){
  return (
     <div className="App">
@@ -35,10 +36,10 @@ render(){
           <input type = "text" placeholder="Enter To-Do"
           value = {this.state.currentItem.text}
           onChange = {this.handleInput}/>
-          <button type = "submit">Add Item
-          </button>
+          <button type = "submit">Add Item</button>
         </form>
-      <ListItems items = {this.state.items}></ListItems>  
+      <ListItems items = {this.state.items}></ListItems> 
+      <completeTodo key = {this.state.key} ></completeTodo>  
     </div>
   );
 }
