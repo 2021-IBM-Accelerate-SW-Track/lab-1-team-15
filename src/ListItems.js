@@ -1,4 +1,4 @@
-import "./ListItems.css"
+import "./listItems.css"
 
 function ListItems(props){
     const items = props.items;

@@ -13,6 +13,7 @@ class App extends React.Component{
   }
   this.handleInput = this.handleInput.bind(this);
   this.addItem = this.addItem.bind(this);
+  this.deleteItem = this.deleteItem.bind(this);
  }
 handleInput(e){
   this.setState({
@@ -27,6 +28,19 @@ addItem(e){
       this.setState({items:newItems, currentItem:{text:'', key:''}})
   }
 }
+
+deleteItem(key)
+{
+  const deleteItems = this.state.items.filter (item => item.key !== key);
+  this. setState ({
+    items : deleteItems
+  })
+
+}
+
+
+
+
 
 render(){
  return (
