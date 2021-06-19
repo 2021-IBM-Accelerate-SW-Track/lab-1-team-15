@@ -9,7 +9,9 @@ class App extends React.Component{
   super(props);
   this.state={
     items:[],
-    currentItem:{text:'', key:''}
+    currentItem:{
+    text:'', 
+    key:''}
   }
   this.handleInput = this.handleInput.bind(this);
   this.addItem = this.addItem.bind(this);

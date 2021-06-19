@@ -1,3 +1,7 @@
+import './header.css'
+
 export default function Header(){
-     return <div align = "center">To-Do-List App</div>
+     return <div className='title' align = "center">
+          <center>To-Do-List App</center>
+          </div>
 }
