@@ -22,7 +22,9 @@
 	cursor: pointer;
     }
 
-	.trash {
+	.deleteBtn {
 		margin: 0 100px;
+		position: absolute;
+		color: red;
 		
 	}
