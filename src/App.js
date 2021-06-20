@@ -2,7 +2,6 @@ import Header from "./component/header";
 import React from "react";
 import './App.css';
 import ListItems from './ListItems.js';
-
 class App extends React.Component{
 
  constructor(props){
@@ -15,6 +14,9 @@ class App extends React.Component{
   }
   this.handleInput = this.handleInput.bind(this);
   this.addItem = this.addItem.bind(this);
+  this.deleteItem = this.deleteItem.bind(this);
+  this.setUpdate = this.setUpdate.bind(this);
+
  }
 handleInput(e){
   this.setState({
@@ -30,6 +32,25 @@ addItem(e){
   }
 }
 
+deleteItem(key){
+  const deleteDaItem= this.state.items.filter(item =>item.key!==key);
+  this.setState({items: deleteDaItem})
+}
+setUpdate(text,key){
+  const items = this.state.items; 
+  items.map(item =>{
+    if(item.key===key){
+      item.text=text;
+    }
+  })
+  this.setState({
+    items:items
+  })
+}
+
+
+
+
 render(){
  return (
     <div className="App">
@@ -40,8 +61,10 @@ render(){
           onChange = {this.handleInput}/>
           <button type = "submit">Add Item</button>
         </form>
-      <ListItems items = {this.state.items}></ListItems> 
-      <completeTodo key = {this.state.key} ></completeTodo>  
+      <ListItems items = {this.state.items} 
+      deleteItem = {this.deleteItem}
+      setUpdate = {this.setUpdate}></ListItems> 
+      <completeTodo key = {this.state.key}  ></completeTodo>  
     </div>
   );
 }

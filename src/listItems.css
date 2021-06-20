@@ -12,12 +12,28 @@
 	text-indent: 10px;
     }
     
-    .list p{
+.list p{
 	padding: 10px;
 	position: relative;
     }
-    .list p span{
+.list p span{
 	position: absolute;
 	right: 10px;
 	cursor: pointer;
     }
+
+.deleteBtn {
+		margin: 0 80px;
+		position: absolute;
+		color: red;
+		
+	}
+.list div input{
+		background-color: transparent;
+		border: 0;
+		color: #fff;
+		font-size: 18px;
+	}
+.list div input:focus{
+		outline:none; 
+	}
