@@ -6,8 +6,17 @@ function ListItems(props){
     const currentItem = props.currentItem;
     const listItems = items.map(item =>
         {
-            return <div className = "list" key = "item.key">
-                <div className='text'>{item.text}
+            return <div className = "list" key = {item.key}>
+                <div className='text'>
+                    <input type="text"
+                    id={item.text}
+                    value = {item.text}
+                    onChange ={
+                        (e) =>{
+                            props.setUpdate(e.target.value, item.key)
+                        }
+                    }
+                    />
                 <span>
                 <button className="deleteBtn" onClick={() => {
                 props.deleteItem(item.key)
