@@ -3,7 +3,7 @@ import React from "react";
 import './App.css';
 import ListItems from './ListItems.js';
 class App extends React.Component{
-
+  
  constructor(props){
   super(props);
   this.state={
@@ -56,10 +56,12 @@ render(){
     <div className="App">
       <Header/>
         <form id = "to-do-form" onSubmit={this.addItem}>
-          <input type = "text" placeholder="Enter To-Do"
-          value = {this.state.currentItem.text}
-          onChange = {this.handleInput}/>
-          <button type = "submit">Add Item</button>
+          <span data-testid="new-item-input">
+            <input type = "text" placeholder= "Enter To-Do"
+            value = {this.state.currentItem.text}
+            onChange = {this.handleInput}/>
+          </span>
+          <span data-testid="new-item-button"><button type = "submit">Add Item</button></span>
         </form>
       <ListItems items = {this.state.items} 
       deleteItem = {this.deleteItem}
