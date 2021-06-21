@@ -5,6 +5,7 @@ function ListItems(props){
     const listItems = items.map(item =>
         {
             return <div className = "list" key = {item.key}>
+                <input type ='checkbox'/> 
                 <div className='text'>
                     <input type="text"
                     id={item.text}
@@ -22,7 +23,6 @@ function ListItems(props){
                 
                 </span> 
                 </div> 
-                <input type ='checkbox'/> 
                
             </div>
         })
